@@ -63,34 +63,26 @@ function Project() {
             </p>
           </div>
           <div className="project">
-            <a target="_blank" rel="noreferrer">
-              <img
-                src={jewellery}
-                className="zoom"
-                alt="thumbnail"
-                width="100%"
-              />
-            </a>
-            <a target="_blank" rel="noreferrer">
-              <h2>Jewellery eCommerce App</h2>
-            </a>
+            <img
+              src={jewellery}
+              className="zoom"
+              alt="thumbnail"
+              width="100%"
+            />
+            <h2>Jewellery eCommerce App</h2>
             <p>
               Developed minimalist jewellery e-commerce app with clean
               navigation, high-quality product imagery, and a modern layout.
             </p>
           </div>
           <div className="project">
-            <a target="_blank" rel="noreferrer">
-              <img
-                src={enterpriseResource}
-                className="zoom"
-                alt="thumbnail"
-                width="100%"
-              />
-            </a>
-            <a target="_blank" rel="noreferrer">
-              <h2>ERP Dashboard</h2>
-            </a>
+            <img
+              src={enterpriseResource}
+              className="zoom"
+              alt="thumbnail"
+              width="100%"
+            />
+            <h2>ERP Dashboard</h2>
             <p>
               Developed an enterprise resource planning (ERP) dashboard with
               real-time analytics, workflow tracking, and data-driven insights
@@ -150,12 +142,8 @@ function Project() {
           </div>
 
           <div className="project">
-            <a target="_blank" rel="noreferrer">
-              <img src={ebook} className="zoom" alt="thumbnail" width="100%" />
-            </a>
-            <a target="_blank" rel="noreferrer">
-              <h2>eBook App</h2>
-            </a>
+            <img src={ebook} className="zoom" alt="thumbnail" width="100%" />
+            <h2>eBook App</h2>
             <p>
               Built an interactive eBook app with annotation, highlighting, and
               note-taking features for an enhanced reading experience.
