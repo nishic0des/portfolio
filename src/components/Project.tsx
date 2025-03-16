@@ -4,7 +4,7 @@ import qna from "../assets/images/qna.png";
 import ebook from "../assets/images/ebook.png";
 import videotube from "../assets/images/videotube.png";
 import auth from "../assets/images/auth.png";
-import ecommerce from "../assets/images/ecommerce.webp";
+import ecommerce from "../assets/images/ecommerce.jpg";
 import enterpriseResource from "../assets/images/enterpriseResource.jpg";
 import jewellery from "../assets/images/jewellery company.webp";
 import bytesize from "../assets/images/bytesize.png";
