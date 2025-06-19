@@ -10,6 +10,11 @@ import {
 } from "./components";
 import FadeIn from "./components/FadeIn";
 import "./index.scss";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+
+library.add(fas, fab);
 
 function App() {
 	const [mode, setMode] = useState<string>("dark");

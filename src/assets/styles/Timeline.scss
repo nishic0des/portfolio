@@ -1,38 +1,63 @@
 .vertical-timeline span {
-    color: white;
-    font-family: 'Courier Prime', monospace;
+	color: black;
+	font: bold 20px "Open Sans", sans-serif;
+	margin: 0 0 10px 10px;
+	padding-right: 5px;
 }
 
 .vertical-timeline p {
-    color: rgb(39, 40, 34);
+	color: rgb(39, 40, 34);
+	font: bold 20px;
 }
 
 .vertical-timeline-element p {
-    color: rgb(39, 40, 34);
+	color: rgb(39, 40, 34);
+	font: bold 16px "Open Sans", sans-serif;
 }
 
 .vertical-timeline-element h3 {
-    color: rgb(39, 40, 34);
+	color: rgb(39, 40, 34);
 }
 
 .vertical-timeline-element h4 {
-    color: rgb(39, 40, 34);
+	color: rgb(39, 40, 34);
+}
+.vertical-timeline-element h1 {
+	color: rgb(39, 40, 34);
+	font: bold "Open Sans", sans-serif;
 }
 
 .vertical-timeline-element span {
-    color: rgb(39, 40, 34);
+	color: rgb(39, 40, 34);
 }
 
 .vertical-timeline-element .vertical-timeline-element-date {
-    color: white;
+	color: white;
 }
 
 .svg-inline--fa {
-    color: white;
+	color: rgb(27, 25, 34);
 }
 
 @media screen and (max-width: 1170px) {
-    .vertical-timeline-element .vertical-timeline-element-date {
-        color: rgb(39, 40, 34);
-    }
+	.vertical-timeline-element .vertical-timeline-element-date {
+		color: rgb(39, 40, 34);
+	}
+}
+/* Adjust the timeline line position */
+.vertical-timeline.vertical-timeline--one-column-left::before {
+	left: 30px; /* Positions the timeline line between icon and content */
+}
+
+/* Ensure proper spacing for left-aligned icons */
+.vertical-timeline-element-icon {
+	left: 0;
+	margin-left: 0;
+}
+.vertical-timeline a {
+	color: rgb(39, 40, 34);
+	text-decoration: none;
+	margin-left: 150px;
+	margin-top: 50px;
+	font: 20px "Open Sans", sans-serif;
 }
