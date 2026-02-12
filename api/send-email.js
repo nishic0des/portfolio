@@ -1,6 +1,6 @@
-import nodemailer from "nodemailer";
-import dotenv from "dotenv";
-import rateLimit from "express-rate-limit";
+const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+const rateLimit = require("express-rate-limit");
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ const limiter = rateLimit({
   message: "Too many requests from this IP, please try again later.",
 });
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Apply rate limiting
   await new Promise((resolve, reject) => {
     limiter(req, res, (result) => {
@@ -101,4 +101,4 @@ export default async function handler(req, res) {
       message: "Failed to send email. Please try again later.",
     });
   }
-}
+};
