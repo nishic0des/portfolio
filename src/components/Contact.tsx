@@ -32,7 +32,12 @@ function Contact() {
 			console.log("Sending email with data:", formData);
 
 			try {
-				const response = await fetch("http://localhost:3001/api/send-email", {
+				const apiUrl =
+					process.env.NODE_ENV === "production"
+						? "/api/send-email"
+						: "http://localhost:3001/api/send-email";
+
+				const response = await fetch(apiUrl, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
