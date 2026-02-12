@@ -23,31 +23,27 @@ function Contact() {
 		setMessageError(message === "");
 
 		if (name && email && message) {
-			const formData = {
+			const templateParams = {
 				name: name,
 				email: email,
 				message: message,
 			};
 
-			console.log("Sending email with data:", formData);
+			console.log("Sending email with data:", templateParams);
 
 			try {
-				const apiUrl =
-					process.env.NODE_ENV === "production"
-						? "/api/send-email"
-						: "http://localhost:3001/api/send-email";
-
-				const response = await fetch(apiUrl, {
+				const response = await fetch("https://formspree.io/f/mkovjgre", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
+						Accept: "application/json",
 					},
-					body: JSON.stringify(formData),
+					body: JSON.stringify(templateParams),
 				});
 
 				const result = await response.json();
 
-				if (response.ok && result.success) {
+				if (response.ok) {
 					console.log("Email sent successfully!", result);
 					toast.success("Email sent successfully!");
 					// Reset form fields after successful submission
@@ -58,9 +54,9 @@ function Contact() {
 					setEmailError(false);
 					setMessageError(false);
 				} else {
-					console.error("Failed to send email:", result.message);
+					console.error("Failed to send email:", result);
 					toast.error(
-						result.message || "Failed to send email. Please try again later.",
+						result.error || "Failed to send email. Please try again later.",
 					);
 				}
 			} catch (error) {
