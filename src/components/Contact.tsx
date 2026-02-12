@@ -1,8 +1,8 @@
 import React, { useState, useRef } from "react";
 import { TextField, Button, Box } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
-
-import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
 	const [name, setName] = useState<string>("");
@@ -15,7 +15,7 @@ function Contact() {
 
 	const form = useRef<HTMLFormElement>(null);
 
-	const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+	const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		setNameError(name === "");
@@ -23,47 +23,47 @@ function Contact() {
 		setMessageError(message === "");
 
 		if (name && email && message) {
-			const templateParams = {
+			const formData = {
 				name: name,
 				email: email,
 				message: message,
 			};
 
-			console.log(templateParams);
-			emailjs
-				.send(
-					"rrr-mails",
-					"template_mhxmgfv",
-					templateParams,
-					"PFAoOmQudd9rshHSv"
-				)
-				.then(
-					(response) => {
-						console.log(
-							"Email sent successfully!",
-							response.status,
-							response.text
-						);
-						alert("Email sent successfully!");
-						// Reset form fields after successful submission
-						setName("");
-						setEmail("");
-						setMessage("");
-						setNameError(false);
-						setEmailError(false);
-						setMessageError(false);
+			console.log("Sending email with data:", formData);
+
+			try {
+				const response = await fetch("http://localhost:3001/api/send-email", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
 					},
-					(error) => {
-						console.error("Failed to send email:", error);
-						alert("Failed to send email. Please try again later.");
-						setName("");
-						setEmail("");
-						setMessage("");
-						setNameError(false);
-						setEmailError(false);
-						setMessageError(false);
-					}
+					body: JSON.stringify(formData),
+				});
+
+				const result = await response.json();
+
+				if (response.ok && result.success) {
+					console.log("Email sent successfully!", result);
+					toast.success("Email sent successfully!");
+					// Reset form fields after successful submission
+					setName("");
+					setEmail("");
+					setMessage("");
+					setNameError(false);
+					setEmailError(false);
+					setMessageError(false);
+				} else {
+					console.error("Failed to send email:", result.message);
+					toast.error(
+						result.message || "Failed to send email. Please try again later.",
+					);
+				}
+			} catch (error) {
+				console.error("Error sending email:", error);
+				toast.error(
+					"Failed to send email. Please check your connection and try again.",
 				);
+			}
 		}
 	};
 
@@ -135,6 +135,18 @@ function Contact() {
 					Send
 				</Button>
 			</form>
+			<ToastContainer
+				position="top-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="light"
+			/>
 		</div>
 	);
 }

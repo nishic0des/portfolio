@@ -124,6 +124,89 @@ function Timeline() {
 							</div>
 						</div>
 					</VerticalTimelineElement>
+					<VerticalTimelineElement
+						className="vertical-timeline-element--work"
+						contentStyle={{
+							background: "white",
+							color: "#333",
+							boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+							borderRadius: "12px",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid white" }}
+						date="2023 - Present"
+						iconStyle={{
+							background: "#5000ca",
+							color: "#fff",
+							fontSize: "24px",
+						}}
+						icon={<FontAwesomeIcon icon={faBriefcase} />}>
+						<h1 className="vertical-timeline-element-title text-2xl font-bold text-indigo-700">
+							App Development Lead at GDGC-MLRIT
+						</h1>
+						<h4 className="vertical-timeline-element-subtitle text-lg text-gray-600">
+							MLRIT, Dundigal
+						</h4>
+						<div className="mt-4 space-y-3">
+							<p className="text-gray-700">
+								<strong>
+									Serving as the App development lead at Google Developer Groups
+									on Campus, MLRIT:
+								</strong>
+							</p>
+							<ul className="list-disc pl-5 space-y-2">
+								<li>Mentored over 300 students.</li>
+								<li>Conducted hands-on workshops on mobile app development.</li>
+								<li>
+									Hosted various Google Study Jams, Hacktober Fest, TechSprint,
+									and other events.
+								</li>
+								<li>Led all App Development initiatives in the chapter</li>
+							</ul>
+						</div>
+					</VerticalTimelineElement>
+					<VerticalTimelineElement
+						className="vertical-timeline-element--work"
+						contentStyle={{
+							background: "white",
+							color: "#333",
+							boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+							borderRadius: "12px",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid white" }}
+						date="2023 - Present"
+						iconStyle={{
+							background: "#5000ca",
+							color: "#fff",
+							fontSize: "24px",
+						}}
+						icon={<FontAwesomeIcon icon={faBriefcase} />}>
+						<h1 className="vertical-timeline-element-title text-2xl font-bold text-indigo-700">
+							Technical Lead at SPARC-MLRIT
+						</h1>
+						<h4 className="vertical-timeline-element-subtitle text-lg text-gray-600">
+							MLRIT, Dundigal
+						</h4>
+						<div className="mt-4 space-y-3">
+							<p className="text-gray-700">
+								<strong>
+									Serving as the Technical Lead at Student Program for Awareness
+									and Responsible CyberSpace:
+								</strong>
+							</p>
+							<ul className="list-disc pl-5 space-y-2">
+								<li>Mentored over 200 students.</li>
+								<li>
+									Conducted hands-on workshops on privacy and security handling
+									in mobile and web apps.
+								</li>
+
+								<li>
+									Implemented secure coding practices workshops for web and
+									mobile applications
+								</li>
+							</ul>
+						</div>
+					</VerticalTimelineElement>
 				</VerticalTimeline>
 			</div>
 		</div>
