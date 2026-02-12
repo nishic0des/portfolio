@@ -1,10 +1,4 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import {
-	faDesktopAlt,
-	faMobileAndroidAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 
