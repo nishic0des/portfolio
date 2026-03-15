@@ -38,6 +38,87 @@ function Timeline() {
 							borderRadius: "12px",
 						}}
 						contentArrowStyle={{ borderRight: "7px solid white" }}
+						date="2024 - Present"
+						iconStyle={{
+							background: "#5000ca",
+							color: "#fff",
+							fontSize: "24px",
+						}}
+						icon={<FontAwesomeIcon icon={faBriefcase} />}>
+						<h1 className="vertical-timeline-element-title text-2xl font-bold text-indigo-700">
+							Co-founder & Technical Lead at OneInfo.ai
+						</h1>
+						<h4 className="vertical-timeline-element-subtitle text-lg text-gray-600">
+							Hyderabad, India
+						</h4>
+						<div className="mt-4 space-y-3">
+							<p className="text-gray-700">
+								<strong>
+									Building an AI-powered platform that automates Instagram DM
+									management for creators:
+								</strong>
+							</p>
+							<ul className="list-disc pl-5 space-y-2">
+								<li>
+									Architected and developed AI system that filters high-value
+									brand collaborations from DM clutter
+								</li>
+								<li>
+									Implemented 24/7 automated DM responses triggered by reel
+									comments using keyword-based AI
+								</li>
+								<li>
+									Built comprehensive growth metrics dashboard tracking
+									followers, profile views, and engagement analytics
+								</li>
+								<li>
+									Developed intelligent content scheduling and automation system
+									for Instagram creators
+								</li>
+								<li>
+									Successfully onboarded 10,000+ creators and processed 2M+ DMs
+									with 5M+ total comments
+								</li>
+								<li>
+									Integrated Instagram API for secure account connection and
+									real-time data synchronization
+								</li>
+							</ul>
+
+							<div className="mt-4 flex flex-row items-center gap-4 justify-between w-full">
+								<h2 className="font-large font-bold text-gray-700">
+									Platform Impact:
+								</h2>
+								<div className="flex flex-wrap gap-4 mt-2">
+									<a
+										href="https://oneinfo.ai"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex items-center px-4 py-2 bg-indigo-100 text-indigo-700 rounded-lg hover:bg-indigo-200 transition-colors">
+										<FontAwesomeIcon
+											icon={faGlobe}
+											className="text-indigo-600"
+										/>
+
+										<span>OneInfo.ai</span>
+										<FontAwesomeIcon
+											icon={faExternalLinkAlt}
+											className="ml-2"
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</VerticalTimelineElement>
+					<VerticalTimelineElement
+						className="vertical-timeline-element--work"
+						contentStyle={{
+							background: "white",
+							color: "#333",
+							boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+							borderRadius: "12px",
+						}}
+						contentArrowStyle={{ borderRight: "7px solid white" }}
 						date="2023 - Present"
 						iconStyle={{
 							background: "#5000ca",

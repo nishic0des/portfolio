@@ -1,4 +1,3 @@
-
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 
@@ -43,6 +42,11 @@ export const expertise = [
 			"I deploy, monitor, and scale production applications across cloud platforms, CI/CD pipelines, and Linux servers.",
 		stack: [
 			"AWS EC2",
+			"AWS ECS",
+			"AWS S3",
+			"AWS ECR",
+			"AWS Route 53",
+			"Redis",
 			"Ubuntu",
 			"PM2",
 			"Nginx",
