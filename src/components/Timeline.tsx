@@ -46,7 +46,7 @@ function Timeline() {
 						}}
 						icon={<FontAwesomeIcon icon={faBriefcase} />}>
 						<h1 className="vertical-timeline-element-title text-2xl font-bold text-indigo-700">
-							Co-founder & Technical Lead at OneInfo.ai
+					Full Stack Developer at OneInfo.ai
 						</h1>
 						<h4 className="vertical-timeline-element-subtitle text-lg text-gray-600">
 							Hyderabad, India
